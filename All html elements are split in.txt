@@ -1,0 +1,218 @@
+All html elements are split in
+Block-level elements and inline elements
+Inline elements are put in the same line, they can only contain other inline elements
+
+HTML5 replaces these two with five new elements
+
+div element stands for division
+span element stands for span
+
+Heading elements...
+
+Sementic element that implies some meaning to the content, whether it's important or what it implies
+
+Why not use div instead of heading? They explain whats important. Used to give meaaning.
+nav tag, used to navigation. Usually contains links to different parts of the website.
+Section tag is used so that article tags should be able to be inside
+aside tag -some information that relates to the main topic, eg related posts
+
+All of these are block level elments but these explain how they are structured. 
+
+HTML Lists
+
+ul tag is unordered list
+<ul>
+   <li> jksld </li>
+    sldk
+    sldk
+</ul>
+
+ol tag is ordered list
+
+HTML Character Entity References
+3 characters should always be escaped, < > and & &kt; &gt; &amp;
+&nbsp; breaks the space
+
+"""""""""""""""""" Internal links ****************************
+Should be used in a tag <a> href = "same_direct.html" title = ""
+
+target="_blank" in a tag used so external links open in a new tab
+
+You can use links to go to sections in sites
+
+#section4 is used to go to different sections
+
+External links also uses a tag but require absolute reference
+
+Pictures HTML
+<!-- comment -->
+
+<img src="picturePath/URL" width="400" height="235">
+Width and height should be specified so the browswer knows how large the picture should be
+
+***************** CSS *******************
+
+HTML - This represents the content
+CSS - This represents the presentation of the content
+Structure is not enough. We need design, CSS makes this possible
+
+CSS Rule
+Ex
+p {
+    color: blue;
+    font-size: 20px;
+}
+
+p is the selector in this case, says that the rules should be aplied to the selector
+color is a property and blue is a value of the property color.
+You should always use ; after the value
+
+Many rules define the stylesheet
+
+In the head part you can call style element which contains the CSS stylesheet 
+
+Element, Class and ID Selectors
+Element selector . just specify the elment name, forex p paragraph
+Class selector .nameOfClass
+It requires a change to the HTML document. For ex <p class="blue">
+ID selector #id For ex >div id="name"
+You can group selectors to the same rule
+
+Child selectors 
+article > p {
+    color: blue;
+}
+In this example every p that is a child of article, the rule shall be aplied to
+
+Descendant selector
+article p {
+    color: blue;
+}
+As long as p is a child rule is aplied, it does not have to be direct child
+
+Pseudo-Class selector
+
+selector:pseudo-class [
+
+]
+
+:link
+:visited
+:hover
+:active
+:nth-child
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+
+}
+
+Make sure your pseudo-class selectors are simple and readable
+
+Which style declarations overrides others?
+
+You can put CSS inside an element
+
+You can also put CSS in header, more general
+The third way is external stylesheet
+
+Origin
+Merge
+Inheritance
+Specificity
+
+Origin - Lst declaration wins, HTML is processed sequentially. 
+Declarations merge - When there is no conflict the element will get both CSS-rules. 
+
+Inheritance 
+DOM tree
+If I specify a element all children will inherit that rule
+For example specify ruls for the body and then all paragraphs will follow the same rules, unless being overwritten
+
+Specificity - Most specific selector combination wins
+Most specific target is used with style in the HTML element
+Next is the ID
+Then class/pseudoclass
+# of elements
+
+Styling text
+.style {
+    font-family: Arial, Helvetica, sans-serif
+    color: 0000ff;
+    font-style: italic
+    font-weight: bold;
+    font-size: 24px;
+    text-transform: lowercase;
+    text-align: right;
+
+}
+Px are considered absolute size
+
+body {
+    font-size: 120%;
+
+}
+style="font-size: 2em;"
+
+Setting common size set % for body
+Use em:s for the more specific elements
+
+The box model
+Content
+Padding
+Border
+Margin
+
+#box {
+    padding: 10px;
+    border: 5px solid black;
+    margin: 40px;
+    width: 300px;
+    boz-sizing: border-box; <--------------------- important
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: gray;
+    box-sizing: border-box;
+}
+Star selector - Select all elements in the entire HTML page
+
+Cumulative margins
+Content 1: margin 40px content 2: 50px cumulative margin = 40+50=90px
+Element on top of each other?
+Vertical margins will collapse to the larger margin. 
+
+overflow can be handled for example via scroll
+
+Background property
+
+#bg {
+    background-image: url("hej.png")
+    background-position: no-repeat;
+    background: url("hej.png") no-repeat roght center:
+}
+
+Position elments by floating
+Takes elementsout of ordinary document flow, can be used to set columns for example. Clear Should
+be used to avoid floating from specified direction(s)
+
+Relative and absolute element positioning
+
+Static positioning - normal document flow, default for all, except html
+
+Relative positioning - Element is positioned relative to its position in normal document flow
+
+p {
+    position: relative;
+    top: 50px;
+    left: 50px;
+}
+
+
+
